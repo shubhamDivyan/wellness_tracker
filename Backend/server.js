@@ -56,6 +56,13 @@ app.use('/api/progress', progressRoutes);
 app.use('/api/social', socialRoutes);
 app.use('/api/ai', aiRoutes);
 
+app.get("/",(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false
+  })
+})
+
 // Health Check Route
 app.get('/api/health', (req, res) => {
   res.json({
